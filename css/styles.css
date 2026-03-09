@@ -12,39 +12,72 @@
 }
 
 :root {
-    /* Halo Primary Colors */
-    --primary: #5749F4;
-    --primary-hover: #4A3CE6;
-    --primary-light: #E8E6FF;
+    /* Professional Primary Colors - Indigo to Purple Gradient */
+    --primary: #4F46E5;
+    --primary-hover: #4338CA;
+    --primary-light: #EEF2FF;
     --primary-foreground: #FFFFFF;
 
-    /* Halo Secondary Colors */
-    --secondary: #D9D9DB;
-    --secondary-foreground: #2A2933;
-    --accent: #F5F5F5;
-    --accent-foreground: #2A2933;
+    /* Accent Colors - Multi-color palette */
+    --secondary: #06B6D4; /* Cyan/Teal */
+    --secondary-hover: #0891B2;
+    --secondary-light: #ECFEFF;
+    --secondary-foreground: #164E63;
 
-    /* Halo Semantic Colors */
-    --success: #A1E5A1;
-    --success-foreground: #003300;
-    --warning: #FFD9B2;
-    --warning-foreground: #4D2700;
-    --error: #FFBFB2;
-    --error-foreground: #590F00;
-    --info: #C9D6F0;
-    --info-foreground: #001133;
+    --accent-coral: #F97316; /* Orange/Coral */
+    --accent-coral-hover: #EA580C;
+    --accent-coral-light: #FFEDD5;
 
-    /* Halo Background & Surface Colors */
-    --background: #FFFFFF;
-    --foreground: #2A2933;
-    --muted: #F5F5F5;
-    --muted-foreground: #616167;
-    --card: #FFFFFF;
-    --card-foreground: #2A2933;
+    --accent-emerald: #10B981; /* Emerald/Green */
+    --accent-emerald-hover: #059669;
+    --accent-emerald-light: #D1FAE5;
+
+    --accent-rose: #F43F5E; /* Rose/Pink */
+    --accent-rose-hover: #E11D48;
+    --accent-rose-light: #FFE4E6;
+
+    --accent-violet: #8B5CF6; /* Violet */
+    --accent-violet-hover: #7C3AED;
+    --accent-violet-light: #EDE9FE;
+
+    --accent-amber: #F59E0B; /* Amber */
+    --accent-amber-hover: #D97706;
+    --accent-amber-light: #FEF3C7;
+
+    /* Neutral Colors */
+    --muted: #F8FAFC;
+    --muted-foreground: #64748B;
     --border: #E2E8F0;
-    --input: #C5C5CB;
 
-    /* Halo Border Radius */
+    /* Semantic Colors */
+    --success: #10B981;
+    --success-foreground: #064E3B;
+    --warning: #F59E0B;
+    --warning-foreground: #78350F;
+    --error: #EF4444;
+    --error-foreground: #7F1D1D;
+    --info: #3B82F6;
+    --info-foreground: #1E3A8A;
+
+    /* Background & Surface Colors */
+    --background: #FFFFFF;
+    --foreground: #0F172A;
+    --card: #FFFFFF;
+    --card-foreground: #0F172A;
+    --popover: #FFFFFF;
+    --popover-foreground: #0F172A;
+    --input: #E2E8F0;
+
+    /* Gradient Definitions */
+    --gradient-primary: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #8B5CF6 100%);
+    --gradient-secondary: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%);
+    --gradient-coral: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+    --gradient-emerald: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    --gradient-hero: linear-gradient(135deg, #EEF2FF 0%, #EDE9FE 25%, #ECFEFF 50%, #D1FAE5 75%, #FFEDD5 100%);
+    --gradient-card: linear-gradient(135deg, rgba(79, 70, 229, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+    --gradient-cta: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #06B6D4 100%);
+
+    /* Border Radius */
     --radius-none: 0;
     --radius-xs: 6px;
     --radius-sm: 8px;
@@ -54,14 +87,15 @@
     --radius-2xl: 40px;
     --radius-pill: 999px;
 
-    /* Halo Shadows */
+    /* Shadows */
     --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
     --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.15);
+    --shadow-colorful: 0 10px 40px rgba(79, 70, 229, 0.15), 0 4px 12px rgba(139, 92, 246, 0.1);
 
-    /* Halo Typography */
+    /* Typography */
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
     /* Halo Spacing */
@@ -180,7 +214,7 @@ a:hover {
     content: '';
     width: 32px;
     height: 32px;
-    background: linear-gradient(135deg, var(--primary) 0%, #7B6FFF 100%);
+    background: var(--gradient-primary);
     border-radius: var(--radius-md);
     display: inline-block;
 }
@@ -343,11 +377,11 @@ a:hover {
 }
 
 /* ===============================================
-   6. Hero Section - Halo Style
+   6. Hero Section - Colorful Gradient Style
    =============================================== */
 
 .hero {
-    background: linear-gradient(135deg, var(--background) 0%, var(--muted) 50%, var(--primary-light) 100%);
+    background: var(--gradient-hero);
     padding: var(--spacing-3xl) var(--spacing-xl);
     min-height: 600px;
     display: flex;
@@ -359,14 +393,27 @@ a:hover {
 .hero::before {
     content: '';
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -10%;
+    right: -5%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(79, 70, 229, 0.15) 0%, rgba(139, 92, 246, 0.1) 50%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 1;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: -5%;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, var(--primary-light) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.12) 0%, rgba(16, 185, 129, 0.08) 50%, transparent 70%);
     border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.5;
+    filter: blur(60px);
+    opacity: 1;
 }
 
 .hero-container {
@@ -404,7 +451,7 @@ a:hover {
 }
 
 /* ===============================================
-   7. Cards - Halo Design System
+   7. Cards - Colorful Design System
    =============================================== */
 
 .feature-card,
@@ -424,8 +471,8 @@ a:hover {
 .module-card:hover,
 .benefit-card:hover,
 .pricing-card:hover {
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-4px);
+    box-shadow: var(--shadow-colorful);
+    transform: translateY(-6px);
     border-color: var(--primary);
 }
 
@@ -438,7 +485,7 @@ a:hover {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary) 0%, #7B6FFF 100%);
+    background: var(--gradient-primary);
     opacity: 0;
     transition: var(--transition);
 }
@@ -449,16 +496,59 @@ a:hover {
     opacity: 1;
 }
 
+/* Colorful Card Variants */
+.feature-card:nth-child(3n+1)::before { background: var(--gradient-secondary); }
+.feature-card:nth-child(3n+2)::before { background: var(--gradient-coral); }
+.feature-card:nth-child(3n+3)::before { background: var(--gradient-emerald); }
+
 .feature-icon,
 .module-icon,
 .benefit-icon {
     font-size: 2rem;
     margin-bottom: var(--spacing-md);
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: var(--spacing-md);
-    background: var(--primary-light);
     border-radius: var(--radius-lg);
+    transition: var(--transition);
+}
+
+.benefit-card:nth-child(1) .benefit-icon {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-light) 100%);
     color: var(--primary);
+}
+
+.benefit-card:nth-child(2) .benefit-icon {
+    background: linear-gradient(135deg, var(--accent-coral-light) 0%, var(--accent-amber-light) 100%);
+    color: var(--accent-coral);
+}
+
+.benefit-card:nth-child(3) .benefit-icon {
+    background: linear-gradient(135deg, var(--accent-violet-light) 0%, var(--accent-rose-light) 100%);
+    color: var(--accent-violet);
+}
+
+/* Colorful Icon Variants */
+.feature-card:nth-child(3n+1) .feature-icon {
+    background: var(--secondary-light);
+    color: var(--secondary);
+}
+
+.feature-card:nth-child(3n+2) .feature-icon {
+    background: var(--accent-coral-light);
+    color: var(--accent-coral);
+}
+
+.feature-card:nth-child(3n+3) .feature-icon {
+    background: var(--accent-emerald-light);
+    color: var(--accent-emerald);
+}
+
+.feature-card:hover .feature-icon,
+.module-card:hover .module-icon,
+.benefit-card:hover .benefit-icon {
+    transform: scale(1.1);
 }
 
 /* ===============================================
@@ -474,7 +564,7 @@ a:hover {
 }
 
 .dash-header {
-    background: linear-gradient(135deg, var(--primary) 0%, #7B6FFF 100%);
+    background: var(--gradient-primary);
     color: var(--primary-foreground);
     padding: var(--spacing-lg);
     font-weight: 600;
@@ -497,18 +587,33 @@ a:hover {
     transition: var(--transition);
 }
 
+.metric-card:nth-child(1) {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-light) 100%);
+}
+
+.metric-card:nth-child(2) {
+    background: linear-gradient(135deg, var(--accent-emerald-light) 0%, var(--secondary-light) 100%);
+}
+
+.metric-card:nth-child(3) {
+    background: linear-gradient(135deg, var(--accent-coral-light) 0%, var(--accent-violet-light) 100%);
+}
+
 .metric-card:hover {
-    background: var(--primary-light);
     transform: scale(1.05);
+    box-shadow: var(--shadow-md);
 }
 
 .metric-value {
     display: block;
     font-size: 2rem;
     font-weight: 700;
-    color: var(--primary);
     margin-bottom: var(--spacing-xs);
 }
+
+.metric-card:nth-child(1) .metric-value { color: var(--primary); }
+.metric-card:nth-child(2) .metric-value { color: var(--accent-emerald); }
+.metric-card:nth-child(3) .metric-value { color: var(--accent-coral); }
 
 .metric-label {
     display: block;
@@ -518,11 +623,11 @@ a:hover {
 }
 
 /* ===============================================
-   9. Page Headers - Halo Style
+   9. Page Headers - Colorful Gradient Style
    =============================================== */
 
 .page-header {
-    background: linear-gradient(135deg, var(--primary) 0%, #7B6FFF 100%);
+    background: var(--gradient-primary);
     color: var(--primary-foreground);
     padding: var(--spacing-3xl) var(--spacing-xl);
     text-align: center;
@@ -535,9 +640,20 @@ a:hover {
     position: absolute;
     top: -50%;
     right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.page-header::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, transparent 70%);
     border-radius: 50%;
 }
 
@@ -590,7 +706,8 @@ a:hover {
 .quote-box {
     background: var(--card);
     padding: var(--spacing-xl);
-    border-left: 4px solid var(--primary);
+    border-left: 4px solid;
+    border-image: var(--gradient-primary) 1;
     margin: var(--spacing-xl) auto;
     border-radius: var(--radius-lg);
     max-width: 800px;
@@ -598,11 +715,11 @@ a:hover {
 }
 
 .highlight-box {
-    background: var(--primary-light);
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-light) 100%);
     padding: var(--spacing-lg);
     border-radius: var(--radius-lg);
     margin: var(--spacing-xl) 0;
-    border: 1px solid rgba(87, 73, 244, 0.2);
+    border: 1px solid rgba(79, 70, 229, 0.2);
 }
 
 /* ===============================================
@@ -685,34 +802,45 @@ a:hover {
 }
 
 .pricing-card.featured {
-    border-color: var(--primary);
-    box-shadow: 0 0 0 4px var(--primary-light), var(--shadow-lg);
+    border: 2px solid transparent;
+    background: linear-gradient(var(--card), var(--card)) padding-box,
+                var(--gradient-primary) border-box;
+    box-shadow: var(--shadow-colorful);
 }
 
 .featured-badge {
     position: absolute;
     top: -12px;
     right: var(--spacing-lg);
-    background: linear-gradient(135deg, var(--primary) 0%, #7B6FFF 100%);
-    color: var(--primary-foreground);
+    background: var(--gradient-coral);
+    color: white;
     padding: var(--spacing-xs) var(--spacing-md);
     border-radius: var(--radius-pill);
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
 }
 
 .price {
     font-size: 3rem;
     font-weight: 700;
-    color: var(--primary);
     margin: var(--spacing-lg) 0;
     display: flex;
     align-items: baseline;
     justify-content: center;
     gap: var(--spacing-xs);
 }
+
+.pricing-card:nth-child(1) .price { color: var(--primary); }
+.pricing-card:nth-child(2) .price {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.pricing-card:nth-child(3) .price { color: var(--secondary); }
 
 .price-unit {
     font-size: 1rem;
@@ -737,14 +865,18 @@ a:hover {
 }
 
 .pricing-section {
-    background: var(--muted);
+    background: linear-gradient(135deg, var(--muted) 0%, var(--primary-light) 100%);
     padding: var(--spacing-xl);
     border-radius: var(--radius-lg);
     margin-bottom: var(--spacing-lg);
+    border: 1px solid var(--border);
 }
 
 .pricing-section h3 {
-    color: var(--primary);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: var(--spacing-md);
 }
 
@@ -769,7 +901,7 @@ a:hover {
 .step-number {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, var(--primary) 0%, #7B6FFF 100%);
+    background: var(--gradient-primary);
     color: var(--primary-foreground);
     border-radius: var(--radius-xl);
     display: flex;
@@ -778,6 +910,19 @@ a:hover {
     font-size: 2rem;
     font-weight: 700;
     box-shadow: var(--shadow-md);
+}
+
+/* Colorful step variations */
+.process-step:nth-child(3n+1) .step-number {
+    background: var(--gradient-secondary);
+}
+
+.process-step:nth-child(3n+2) .step-number {
+    background: var(--gradient-emerald);
+}
+
+.process-step:nth-child(3n+3) .step-number {
+    background: var(--gradient-coral);
 }
 
 .step-content {
@@ -974,11 +1119,11 @@ a:hover {
 }
 
 /* ===============================================
-   17. CTA Section - Halo Style
+   17. CTA Section - Colorful Gradient Style
    =============================================== */
 
 .cta-section {
-    background: linear-gradient(135deg, var(--primary) 0%, #7B6FFF 100%);
+    background: var(--gradient-cta);
     color: var(--primary-foreground);
     padding: var(--spacing-3xl) var(--spacing-xl);
     text-align: center;
@@ -991,9 +1136,20 @@ a:hover {
     position: absolute;
     top: -50%;
     left: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.cta-section::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    right: -10%;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(249, 115, 22, 0.2) 0%, transparent 70%);
     border-radius: 50%;
 }
 
@@ -1225,7 +1381,7 @@ a:hover {
 .p-3 { padding: var(--spacing-md); }
 .p-4 { padding: var(--spacing-lg); }
 
-/* Alert Components - Halo Style */
+/* Alert Components - Colorful Style */
 .alert {
     padding: var(--spacing-md);
     border-radius: var(--radius-md);
@@ -1234,30 +1390,30 @@ a:hover {
 }
 
 .alert-info {
-    background: var(--info);
-    border-color: var(--info-foreground);
+    background: linear-gradient(135deg, #DBEAFE 0%, #E0E7FF 100%);
+    border-color: var(--info);
     color: var(--info-foreground);
 }
 
 .alert-success {
-    background: var(--success);
-    border-color: var(--success-foreground);
+    background: linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%);
+    border-color: var(--success);
     color: var(--success-foreground);
 }
 
 .alert-warning {
-    background: var(--warning);
-    border-color: var(--warning-foreground);
+    background: linear-gradient(135deg, #FEF3C7 0%, #FFFBEB 100%);
+    border-color: var(--warning);
     color: var(--warning-foreground);
 }
 
 .alert-error {
-    background: var(--error);
-    border-color: var(--error-foreground);
+    background: linear-gradient(135deg, #FEE2E2 0%, #FEF2F2 100%);
+    border-color: var(--error);
     color: var(--error-foreground);
 }
 
-/* Badge Component */
+/* Badge Component - Colorful */
 .badge {
     display: inline-block;
     padding: var(--spacing-xs) var(--spacing-sm);
@@ -1269,18 +1425,28 @@ a:hover {
 }
 
 .badge-primary {
-    background: var(--primary);
-    color: var(--primary-foreground);
+    background: var(--gradient-primary);
+    color: white;
 }
 
 .badge-secondary {
-    background: var(--secondary);
-    color: var(--secondary-foreground);
+    background: var(--gradient-secondary);
+    color: white;
 }
 
 .badge-success {
-    background: var(--success);
-    color: var(--success-foreground);
+    background: var(--gradient-emerald);
+    color: white;
+}
+
+.badge-warning {
+    background: var(--gradient-coral);
+    color: white;
+}
+
+.badge-info {
+    background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+    color: white;
 }
 
 /* Tooltip */
