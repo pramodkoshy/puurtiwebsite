@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Features - Puurti ERP</title>
     <meta name="description" content="Explore Puurti's powerful features including Business Intelligence, Reporting, Alerts, Security, and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -12,7 +15,13 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">PUURTI</a>
-            <button class="mobile-toggle" onclick="toggleMenu()">☰</button>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
@@ -38,9 +47,15 @@
     <section class="page-content">
         <div class="container">
             <div class="features-detailed">
-                
+
                 <div class="feature-card">
-                    <div class="feature-icon">📊</div>
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                    </div>
                     <h3>Business Intelligence</h3>
                     <p>Puurti's Business Intelligence Tool provides different views of business operations. Sales Reports can be demonstrated as pie charts showing distribution per regions, line charts showing sales per month, or stacked column charts for regional monthly comparisons.</p>
                     <ul class="feature-list">
@@ -52,7 +67,15 @@
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">📈</div>
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
                     <h3>Advanced Reporting</h3>
                     <p>Build reports using Puurti's report builder and plug it into the role-based security system. Both financial and management reports can be quickly built using the inbuilt report builder.</p>
                     <ul class="feature-list">
@@ -64,7 +87,12 @@
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🔔</div>
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                    </div>
                     <h3>Alerts and Notifications</h3>
                     <p>Any business event can be captured and directed to a particular user. Track important products in inventory and trigger alerts when levels fall below thresholds.</p>
                     <ul class="feature-list">
@@ -76,7 +104,12 @@
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🔐</div>
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
                     <h3>Configurable Role-Based Security</h3>
                     <p>Access to any document, report and dashboard comes within the purview of Puurti's excellent security system. Each user plays a particular role with specific permissions.</p>
                     <ul class="feature-list">
@@ -88,7 +121,11 @@
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">📋</div>
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                    </div>
                     <h3>Complete Audit Trail</h3>
                     <p>Any user actions in the system can be audited. The administrator can configure the system to audit any document and the changes made to it.</p>
                     <ul class="feature-list">
@@ -100,7 +137,12 @@
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🔄</div>
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
                     <h3>Workflow Engine</h3>
                     <p>Puurti is built from the ground up to use workflow definitions. Documents can be tagged to workflows and routed to users for approval.</p>
                     <ul class="feature-list">
@@ -112,7 +154,13 @@
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🏗️</div>
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                    </div>
                     <h3>Model Driven Architecture</h3>
                     <p>Built on top of an excellent architecture designed by Compiere. Window/document definitions and report definitions are defined in the data model.</p>
                     <ul class="feature-list">
@@ -124,7 +172,13 @@
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🌍</div>
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M2 12h20"></path>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </div>
                     <h3>Multi-Entity Support</h3>
                     <p>Puurti comes completely enabled with comprehensive multi-entity capabilities for global operations.</p>
                     <ul class="feature-list">
@@ -136,7 +190,11 @@
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">☁️</div>
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                        </svg>
+                    </div>
                     <h3>Cloud Ready</h3>
                     <p>Deploy on cloud infrastructure to avoid high capital costs and ensure reliability at a fraction of traditional costs.</p>
                     <ul class="feature-list">

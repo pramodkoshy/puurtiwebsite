@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puurti - Modern Open Source Web ERP</title>
     <meta name="description" content="Puurti - Low-code ERP and professional services. Open-source, flexible, secure, and built for real-world operations.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -12,7 +15,13 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">PUURTI</a>
-            <button class="mobile-toggle" onclick="toggleMenu()">☰</button>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
@@ -34,13 +43,21 @@
                 <p class="tagline">Open-source, low-code, multi-tenant solution delivering <span class="highlight">360° visibility</span> across your entire organization</p>
                 <p>Puurti fulfills your information requirements with a flexible, secure, and powerful ERP system built for real-world operations. From sales and procurement to inventory and accounting - all integrated seamlessly.</p>
                 <div class="cta-buttons">
-                    <a href="contact.html" class="btn-primary">Start Free Trial</a>
-                    <a href="features.html" class="btn-secondary">Explore Features</a>
+                    <a href="contact.html" class="btn-primary btn-large">Start Free Trial</a>
+                    <a href="features.html" class="btn-outline btn-large">Explore Features</a>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="dashboard-preview">
-                    <div class="dash-header">Performance Dashboard</div>
+                    <div class="dash-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;">
+                            <rect x="3" y="3" width="7" height="9"></rect>
+                            <rect x="14" y="3" width="7" height="5"></rect>
+                            <rect x="14" y="12" width="7" height="9"></rect>
+                            <rect x="3" y="16" width="7" height="5"></rect>
+                        </svg>
+                        Performance Dashboard
+                    </div>
                     <div class="dash-content">
                         <div class="metric-card">
                             <span class="metric-value">₹2.4M</span>
@@ -65,24 +82,41 @@
         <div class="container">
             <h2 class="section-title">Why Choose an ERP Solution?</h2>
             <p class="section-subtitle">Business at the speed of thought - where technology and business are inextricably linked</p>
-            
+
             <div class="quote-box">
                 <p><strong>Management by Exception:</strong> "Under performing stores are identified, problems are studied, and corrective measures are taken. Very little time is spent on locations that are meeting or exceeding corporate profit goals. The objective of management by exception is to focus attention on areas where corrective measures appear necessary."</p>
             </div>
-            
+
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <div class="benefit-icon">📊</div>
+                    <div class="benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                    </div>
                     <h3>Real-time Insights</h3>
                     <p>Dashboard showing revenue for the previous three months at a glance</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">🔔</div>
+                    <div class="benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                    </div>
                     <h3>Smart Alerts</h3>
                     <p>Notifications when stock falls below minimum levels or lead times are exceeded</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">🎯</div>
+                    <div class="benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                    </div>
                     <h3>Digital Nervous System</h3>
                     <p>Always aware of what's happening in your business with sensitive monitoring</p>
                 </div>
@@ -97,27 +131,57 @@
             <p class="section-subtitle">Everything you need to run your business efficiently</p>
             <div class="features-grid">
                 <div class="feature-item">
-                    <h4>✓ Sales & CRM</h4>
+                    <h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Sales & CRM
+                    </h4>
                     <p>Complete customer lifecycle management</p>
                 </div>
                 <div class="feature-item">
-                    <h4>✓ Procurement</h4>
+                    <h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Procurement
+                    </h4>
                     <p>Streamlined purchasing processes</p>
                 </div>
                 <div class="feature-item">
-                    <h4>✓ Inventory</h4>
+                    <h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Inventory
+                    </h4>
                     <p>Real-time stock management</p>
                 </div>
                 <div class="feature-item">
-                    <h4>✓ Manufacturing</h4>
+                    <h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Manufacturing
+                    </h4>
                     <p>Multi-level BOM and work orders</p>
                 </div>
                 <div class="feature-item">
-                    <h4>✓ Projects</h4>
+                    <h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Projects
+                    </h4>
                     <p>Complete project financial tracking</p>
                 </div>
                 <div class="feature-item">
-                    <h4>✓ Accounting</h4>
+                    <h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Accounting
+                    </h4>
                     <p>Automated journal entries</p>
                 </div>
             </div>
@@ -130,8 +194,8 @@
             <h2>Ready to Transform Your Business?</h2>
             <p>Join hundreds of companies using Puurti to streamline their operations</p>
             <div class="cta-buttons">
-                <a href="pricing.html" class="btn-primary">View Pricing</a>
-                <a href="contact.html" class="btn-secondary">Contact Sales</a>
+                <a href="pricing.html" class="btn-secondary btn-large">View Pricing</a>
+                <a href="contact.html" class="btn-outline btn-large" style="border-color: white; color: white;">Contact Sales</a>
             </div>
         </div>
     </section>

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - Puurti ERP</title>
     <meta name="description" content="Professional implementation services for Puurti ERP - from assessment to go-live support.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -12,7 +15,13 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">PUURTI</a>
-            <button class="mobile-toggle" onclick="toggleMenu()">☰</button>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
@@ -37,11 +46,11 @@
     <!-- Services Content -->
     <section class="page-content">
         <div class="container">
-            <h2>Our Implementation Process</h2>
+            <h2 style="text-align: center; color: var(--foreground);">Our Implementation Process</h2>
             <p class="section-subtitle">Typical steps of our Puurti implementation process</p>
-            
+
             <div class="process-timeline">
-                
+
                 <div class="process-step">
                     <div class="step-number">1</div>
                     <div class="step-content">
@@ -100,14 +109,14 @@
 
             </div>
 
-            <div class="services-additional">
-                <h2>Additional Services</h2>
-                
+            <div style="margin-top: var(--spacing-3xl);">
+                <h2 style="text-align: center; color: var(--foreground);">Additional Services</h2>
+
                 <div class="service-cards">
                     <div class="service-card">
                         <h3>Custom Development</h3>
                         <p>We follow extreme programming methodology for all projects. Your specialized requirements will be evaluated by our technical support team.</p>
-                        <ul>
+                        <ul class="feature-list">
                             <li>Internal project collaboration system</li>
                             <li>External interface for project monitoring</li>
                             <li>Bi-monthly invoicing</li>
@@ -118,7 +127,7 @@
                     <div class="service-card">
                         <h3>Training Programs</h3>
                         <p>Comprehensive training for all user levels:</p>
-                        <ul>
+                        <ul class="feature-list">
                             <li>End-user training</li>
                             <li>Administrator training</li>
                             <li>Technical training for IT staff</li>
@@ -129,7 +138,7 @@
                     <div class="service-card">
                         <h3>Data Migration</h3>
                         <p>Seamless transition from your existing systems:</p>
-                        <ul>
+                        <ul class="feature-list">
                             <li>Data mapping and cleansing</li>
                             <li>Automated migration tools</li>
                             <li>Validation and reconciliation</li>
@@ -140,7 +149,7 @@
                     <div class="service-card">
                         <h3>Integration Services</h3>
                         <p>Connect Puurti with your existing systems:</p>
-                        <ul>
+                        <ul class="feature-list">
                             <li>API development</li>
                             <li>Third-party integrations</li>
                             <li>Custom connectors</li>
@@ -150,9 +159,9 @@
                 </div>
             </div>
 
-            <div class="ownership-note">
-                <h3>You Own The Code</h3>
-                <p>At any point you can disengage and hire another service vendor to provide the technical know-how to service your ERP implementation. At the start of the project, we will maintain a separate online versioning system that you own.</p>
+            <div class="highlight-box" style="margin-top: var(--spacing-3xl);">
+                <h3 style="color: var(--primary); margin-bottom: var(--spacing-md);">You Own The Code</h3>
+                <p style="margin-bottom: 0;">At any point you can disengage and hire another service vendor to provide the technical know-how to service your ERP implementation. At the start of the project, we will maintain a separate online versioning system that you own.</p>
             </div>
         </div>
     </section>

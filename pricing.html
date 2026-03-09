@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing - Puurti ERP</title>
     <meta name="description" content="Transparent pricing for Puurti ERP - Free open source, professional support, and cloud hosting options.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -12,7 +15,13 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">PUURTI</a>
-            <button class="mobile-toggle" onclick="toggleMenu()">☰</button>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
@@ -38,7 +47,7 @@
     <section class="page-content">
         <div class="container">
             <div class="pricing-cards">
-                
+
                 <div class="pricing-card">
                     <h3>Open Source</h3>
                     <div class="price">Free</div>
@@ -53,7 +62,7 @@
                         <li>No licensing fees</li>
                         <li>Complete ERP functionality</li>
                     </ul>
-                    <a href="contact.html" class="btn-secondary">Download Now</a>
+                    <a href="contact.html" class="btn-outline btn-large" style="width: 100%;">Download Now</a>
                     <p class="price-note">Perfect for businesses wanting complete control</p>
                 </div>
 
@@ -72,7 +81,7 @@
                         <li>On-site support available</li>
                         <li><strong>50% discount if open-sourced</strong></li>
                     </ul>
-                    <a href="contact.html" class="btn-primary">Get Started</a>
+                    <a href="contact.html" class="btn-primary btn-large" style="width: 100%;">Get Started</a>
                     <p class="price-note">Recommended for new implementations</p>
                 </div>
 
@@ -90,21 +99,21 @@
                         <li>24/7 monitoring</li>
                         <li>Pay as you grow</li>
                     </ul>
-                    <a href="contact.html" class="btn-secondary">Learn More</a>
+                    <a href="contact.html" class="btn-outline btn-large" style="width: 100%;">Learn More</a>
                     <p class="price-note">Ideal for avoiding IT infrastructure costs</p>
                 </div>
 
             </div>
 
             <div class="pricing-details">
-                <h2>Detailed Pricing Information</h2>
-                
+                <h2 style="color: var(--foreground);">Detailed Pricing Information</h2>
+
                 <div class="pricing-section">
                     <h3>Implementation Services</h3>
                     <p>Our core ERP product is free. You can download it, try it, test it and use it without any payment commitment from your side.</p>
                     <p>We offer our expertise programming services at <strong>$75 per hour</strong>. We follow the extreme programming methodology for all our projects. Your specialized requirements will be evaluated by our technical support team.</p>
                     <div class="highlight-box">
-                        <p><strong>Special Offer:</strong> Any changes you have us make need not be open sourced and will remain your trade secret. However, if you allow us to release any modifications into the open source realm, we will reduce our charges to <strong>$50 per hour</strong> for those changes.</p>
+                        <p class="mb-0"><strong>Special Offer:</strong> Any changes you have us make need not be open sourced and will remain your trade secret. However, if you allow us to release any modifications into the open source realm, we will reduce our charges to <strong>$50 per hour</strong> for those changes.</p>
                     </div>
                 </div>
 
@@ -116,7 +125,7 @@
                 <div class="pricing-section">
                     <h3>Cloud Computing Benefits</h3>
                     <p>Cloud Computing subscription services allow you to:</p>
-                    <ul>
+                    <ul class="feature-list">
                         <li>Avoid high capital costs</li>
                         <li>Ensure server availability with minimal downtime</li>
                         <li>Get redundancy of data and automatic backups</li>
